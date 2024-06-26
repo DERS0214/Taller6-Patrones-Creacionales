@@ -4,6 +4,8 @@
  */
 package com.mycompany.mavenproject1;
 
+import Builders.JugadorBuilder;
+import Builders.EnemigoBuilder;
 import java.util.*;
 
 /**

@@ -11,33 +11,21 @@ import java.util.*;
  * @author CltControl
  */
 public class Enemigo implements Entidad {
-    private String tipo;
-    private int poder;
-    private List<String> acciones;
-
-    public Enemigo(String tipo, int poder) {
-        this.tipo = tipo;
-        this.poder = poder;
-        this.acciones = new ArrayList<>();
+    private String nombre;
+    private ArrayList<String> listaAcciones;
+    
+    public Enemigo(String nombre, ArrayList<String> listaAcciones){
+        this.nombre = nombre;
+        this.listaAcciones = listaAcciones;
     }
-
-    public void configurarAcciones(List<String> list) {
-        this.acciones.addAll(list);
-        
-    }
-
-    public void agregarSprites() {
-        System.out.println("Sprites añadidos para el enemigo " + tipo);
-    }
-
+    
     @Override
-    public void dibujar() {
-        System.out.println("Dibujando enemigo " + tipo);
+    public void dibujar(){
+        System.out.println("Dibujando enemigo...");
     }
-
     @Override
-    public void actualizar() {
-        System.out.println("Actualizando enemigo " + tipo);
+    public void actualizar(){
+        System.out.println("Actualizando enemigo...");
     }
 
 }

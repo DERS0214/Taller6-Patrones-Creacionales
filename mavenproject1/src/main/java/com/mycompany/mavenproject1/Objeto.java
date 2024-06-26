@@ -4,29 +4,27 @@
  */
 package com.mycompany.mavenproject1;
 
-import java.util.*;
+import java.util.ArrayList;
 
 /**
  *
  * @author CltControl
  */
-public class Jugador implements Entidad {
+public class Objeto implements Entidad {
     private String nombre;
     private ArrayList<String> listaAcciones;
     
-    public Jugador(String nombre, ArrayList<String> listaAcciones){
+    public Objeto(String nombre, ArrayList<String> listaAcciones){
         this.nombre = nombre;
         this.listaAcciones = listaAcciones;
     }
     
     @Override
     public void dibujar(){
-        System.out.println("Dibujando jugador...");
+        System.out.println("Dibujando objeto...");
     }
     @Override
     public void actualizar(){
-        System.out.println("Actualizando jugador...");
+        System.out.println("Actualizando objeto...");
     }
-
 }
-
