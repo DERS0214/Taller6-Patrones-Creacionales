@@ -13,30 +13,19 @@ import java.util.*;
  */
 // Builder para construir un enemigo de manera flexible
 public class EnemigoBuilder {
-    private String tipo;
+    private Enemigo e;
     private int poder;
-    private List<String> acciones;
+    private String tipo;
 
-    public EnemigoBuilder(String tipo) {
-        this.tipo = tipo;
-        this.acciones = new ArrayList<>();
+    public EnemigoBuilder(Enemigo e) {
+        this.e = e;
     }
 
-    public EnemigoBuilder poder(int poder) {
+    public void construirPoder(int poder){
         this.poder = poder;
-        return this;
     }
-
-    public EnemigoBuilder acciones(List<String> acciones) {
-        this.acciones.addAll(acciones);
-        return this;
-    }
-
-    public Enemigo build() {
-        Enemigo enemigo = new Enemigo(tipo, poder);
-        enemigo.configurarAcciones(this.acciones); 
-        enemigo.agregarSprites();
-        return enemigo;
+    public void definirTipo(String tipo){
+        this.tipo = tipo.toLowerCase();
     }
 }
 

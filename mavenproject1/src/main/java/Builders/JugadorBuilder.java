@@ -4,6 +4,7 @@
  */
 package Builders;
 
+import com.mycompany.mavenproject1.Enemigo;
 import com.mycompany.mavenproject1.Jugador;
 import java.util.*;
 
@@ -13,36 +14,19 @@ import java.util.*;
  */
 // Builder para construir un jugador de manera flexible
 public class JugadorBuilder {
-    private String nombre;
+    private Jugador j;
     private int vida;
     private int fuerza;
-    private List<String> acciones;
 
-    public JugadorBuilder(String nombre) {
-        this.nombre = nombre;
-        this.acciones = new ArrayList<>();
+    public JugadorBuilder(Jugador j) {
+        this.j = j;
     }
 
-    public JugadorBuilder vida(int vida) {
+    public void construirPoder(int vida){
         this.vida = vida;
-        return this;
     }
-
-    public JugadorBuilder fuerza(int fuerza) {
+    public void definirTipo(int tipo){
         this.fuerza = fuerza;
-        return this;
-    }
-
-    public JugadorBuilder acciones(List<String> acciones) {
-        this.acciones.addAll(acciones);
-        return this;
-    }
-
-    public Jugador build() {
-        Jugador jugador = new Jugador(nombre, vida, fuerza);
-        jugador.configurarAcciones(this.acciones); // Configurar acciones definidas en el builder
-        jugador.agregarSprites(); // Agregar sprites/animaciones (pueden ser configuradas en el constructor si necesario)
-        return jugador;
     }
 }
 
