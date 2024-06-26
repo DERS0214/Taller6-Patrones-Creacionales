@@ -27,5 +27,9 @@ public class EnemigoBuilder {
     public void definirTipo(String tipo){
         this.tipo = tipo.toLowerCase();
     }
+    
+    public Enemigo getEnemigo(){
+        return e;
+    }
 }
 

@@ -4,6 +4,7 @@
  */
 package Builders;
 
+import com.mycompany.mavenproject1.Enemigo;
 import com.mycompany.mavenproject1.Objeto;
 
 /**
@@ -24,5 +25,9 @@ public class ObjetoBuilder {
     }
     public void definirTipo(String tipo){
         this.tipo = tipo.toLowerCase();
+    }
+    
+    public Objeto getObjeto(){
+        return o;
     }
 }

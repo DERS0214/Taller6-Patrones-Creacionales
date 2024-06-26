@@ -28,5 +28,9 @@ public class JugadorBuilder {
     public void definirTipo(int tipo){
         this.fuerza = fuerza;
     }
+    
+    public Jugador getJugador(){
+        return j;
+    }
 }
 
