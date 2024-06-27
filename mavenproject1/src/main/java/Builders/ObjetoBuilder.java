@@ -5,13 +5,14 @@
 package Builders;
 
 import com.mycompany.mavenproject1.Enemigo;
+import com.mycompany.mavenproject1.Entidad;
 import com.mycompany.mavenproject1.Objeto;
 
 /**
  *
  * @author CltControl
  */
-public class ObjetoBuilder {
+public class ObjetoBuilder implements EntidadBuilder{
     private Objeto o;
     private int peso;
     private String tipo;
@@ -29,5 +30,22 @@ public class ObjetoBuilder {
     
     public Objeto getObjeto(){
         return o;
+    }
+
+    @Override
+    public void definirListado() {
+    }
+
+    @Override
+    public void agregarSprites() {
+    }
+
+    @Override
+    public void configurarCaracteristicas() {
+    }
+
+    @Override
+    public Entidad build() {
+        throw new UnsupportedOperationException("Not supported yet."); 
     }
 }

@@ -5,6 +5,7 @@
 package Builders;
 
 import com.mycompany.mavenproject1.Enemigo;
+import com.mycompany.mavenproject1.Entidad;
 import com.mycompany.mavenproject1.Jugador;
 import java.util.*;
 
@@ -13,7 +14,7 @@ import java.util.*;
  * @author CltControl
  */
 // Builder para construir un jugador de manera flexible
-public class JugadorBuilder {
+public class JugadorBuilder implements EntidadBuilder {
     private Jugador j;
     private int vida;
     private int fuerza;
@@ -31,6 +32,23 @@ public class JugadorBuilder {
     
     public Jugador getJugador(){
         return j;
+    }
+
+    @Override
+    public void definirListado() {
+    }
+
+    @Override
+    public void agregarSprites() {
+    }
+
+    @Override
+    public void configurarCaracteristicas() {
+    }
+
+    @Override
+    public Entidad build() {
+        throw new UnsupportedOperationException("Not supported yet."); 
     }
 }
 

@@ -5,6 +5,7 @@
 package Builders;
 
 import com.mycompany.mavenproject1.Enemigo;
+import com.mycompany.mavenproject1.Entidad;
 import java.util.*;
 
 /**
@@ -12,7 +13,7 @@ import java.util.*;
  * @author CltControl
  */
 // Builder para construir un enemigo de manera flexible
-public class EnemigoBuilder {
+public class EnemigoBuilder implements EntidadBuilder{
     private Enemigo e;
     private int poder;
     private String tipo;
@@ -30,6 +31,24 @@ public class EnemigoBuilder {
     
     public Enemigo getEnemigo(){
         return e;
+    }
+
+    @Override
+    public void definirListado() {
+       
+    }
+
+    @Override
+    public void agregarSprites() {
+    }
+
+    @Override
+    public void configurarCaracteristicas() {
+    }
+
+    @Override
+    public Entidad build() {
+        throw new UnsupportedOperationException("Not supported yet."); 
     }
 }
 
