@@ -12,13 +12,7 @@ public class Juego {
 
     public static void main(String[] args) {
         
-        Jugador jugador = EntidadFactory.crearJugador("Player1");
-        jugador.dibujar();
-        jugador.actualizar();
-
-        Enemigo enemigo = EntidadFactory.crearEnemigo("Boss");
-        enemigo.dibujar();
-        enemigo.actualizar();
+        
     }
 }
 
